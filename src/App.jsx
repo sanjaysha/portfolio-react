@@ -1,10 +1,9 @@
-import React from 'react'
-import Navbar from './Components/Navbar/Navbar'
-import Hero from './Components/Hero/Hero'
-import About from './Components/About/About'
-import Projects from './Components/Projects/Projects'
-import Contact from './Components/Contact/Contact'
-import Footer from './Components/Footer/Footer'
+import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero";
+import About from "./components/About/About";
+import Projects from "./components/Projects/Projects";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
@@ -16,7 +15,7 @@ const App = () => {
       <Contact />
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

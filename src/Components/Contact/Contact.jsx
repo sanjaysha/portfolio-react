@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Contact.css";
 import theme_pattern from "../../assets/theme_pattern.svg";
 import mail_icon from "../../assets/mail_icon.svg";
 import call_icon from "../../assets/call_icon.svg";
@@ -7,9 +6,11 @@ import location_icon from "../../assets/location_icon.svg";
 
 const Contact = () => {
   const [result, setResult] = useState("");
+
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
+
     const formData = new FormData(event.target);
     formData.append("access_key", "909a5cf4-82c9-4875-8370-775d15a491b4");
 
@@ -19,10 +20,9 @@ const Contact = () => {
     });
 
     const data = await response.json();
-    console.log(data, "DATA");
     if (data.success) {
       setResult("Form Submitted Successfully");
-      alert(result);
+      alert("Form Submitted Successfully");
       event.target.reset();
     } else {
       setResult("Error");
@@ -30,42 +30,126 @@ const Contact = () => {
   };
 
   return (
-    <div name="contact" className="contact">
-      <div className="contact-title">
-        <h1>Get in touch</h1>
-        <img src={theme_pattern} alt="" />
+    <div
+      name="contact"
+      className="
+        flex flex-col items-center
+        px-4 sm:px-8 md:px-16 lg:px-32
+        py-12 md:py-16
+        gap-12
+      "
+    >
+      {/* Title */}
+      <div className="relative text-center w-full">
+        <h1 className="text-3xl sm:text-4xl font-semibold">Get in touch</h1>
+        <img
+          src={theme_pattern}
+          alt=""
+          className="absolute -bottom-1 right-1/2 translate-x-1/2 -z-10 w-20 sm:w-28"
+        />
       </div>
-      <div className="contact-section">
-        <div className="contact-left">
-          <h1>Let's Talk</h1>
-          <p>
-            I'm currently available to take on new projects. So feel free to
-            contact me throuh any of the following means-
+
+      {/* Main Section */}
+      <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 w-full">
+        {/* LEFT CONTENT */}
+        <div className="flex flex-col gap-8 max-w-xl">
+          <h1
+            className="
+              text-5xl sm:text-6xl md:text-7xl font-extrabold 
+              bg-gradient-to-r from-[#df8908] to-[#b415ff] 
+              bg-clip-text text-transparent
+            "
+          >
+            Let’s Talk
+          </h1>
+
+          <p className="text-gray-300 text-lg leading-relaxed">
+            I'm currently available to take on new projects. Feel free to reach
+            out to me using any of the methods below—
           </p>
-          <div className="contact-details">
-            <div className="contact-detail">
-              <img src={mail_icon} alt="" /> <p>shahi.sanjayshahi@gmail.com</p>
+
+          {/* CONTACT DETAILS */}
+          <div className="flex flex-col gap-6 text-gray-300 text-lg">
+            <div className="flex items-center gap-4">
+              <img src={mail_icon} className="h-7" alt="" />
+              <p>shahi.sanjayshahi@gmail.com</p>
             </div>
-            <div className="contact-detail">
-              <img src={call_icon} alt="" /> <p>+91 8650460318</p>
+
+            <div className="flex items-center gap-4">
+              <img src={call_icon} className="h-7" alt="" />
+              <p>+91 8650460318</p>
             </div>
-            <div className="contact-detail">
-              <img src={location_icon} alt="" /> <p>Bhubneshwar, India</p>
+
+            <div className="flex items-center gap-4">
+              <img src={location_icon} className="h-7" alt="" />
+              <p>Bhubneshwar, India</p>
             </div>
           </div>
         </div>
-        <form onSubmit={onSubmit} className="contact-right">
-          <label htmlFor="">Your Name</label>
-          <input type="text" placeholder="Enter your name" name="name" />
-          <label htmlFor="">Your Email</label>
-          <input type="email" name="email" placeholder="Enter your email" />
-          <label htmlFor="">write your message here</label>
-          <textarea
-            name="message"
-            rows="8"
-            placeholder="Enter your message"
-          ></textarea>
-          <button type="submit" className="contact-submit">
+
+        {/* RIGHT — FORM */}
+        <form
+          onSubmit={onSubmit}
+          className="flex flex-col gap-6 w-full max-w-xl"
+        >
+          <div>
+            <label className="text-gray-300 text-lg font-medium">
+              Your Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              className="
+                w-full h-12 mt-2 px-4 rounded 
+                bg-[#32323c] text-gray-300 text-lg 
+                outline-none focus:ring-2 focus:ring-[#b415ff]
+              "
+            />
+          </div>
+
+          <div>
+            <label className="text-gray-300 text-lg font-medium">
+              Your Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              className="
+                w-full h-12 mt-2 px-4 rounded
+                bg-[#32323c] text-gray-300 text-lg 
+                outline-none focus:ring-2 focus:ring-[#b415ff]
+              "
+            />
+          </div>
+
+          <div>
+            <label className="text-gray-300 text-lg font-medium">
+              Write your message here
+            </label>
+            <textarea
+              name="message"
+              rows="6"
+              placeholder="Enter your message"
+              className="
+                w-full mt-2 p-4 rounded
+                bg-[#32323c] text-gray-300 text-lg 
+                outline-none focus:ring-2 focus:ring-[#b415ff]
+              "
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            className="
+              mt-2 text-white text-xl rounded-full 
+              px-10 py-3
+              bg-gradient-to-r from-[#df8908] to-[#b415ff]
+              transition-transform duration-300 
+              hover:scale-105
+            "
+          >
             Submit now
           </button>
         </form>

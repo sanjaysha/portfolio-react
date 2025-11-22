@@ -1,13 +1,8 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-html {
-  scroll-behavior: smooth;
-}
+@import "tailwindcss";
+
 body {
   height: 100vh;
   background: #161513;
   color: white;
-  font-family: "outfit";
+  font-family: "Outfit", sans-serif;
 }
