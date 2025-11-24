@@ -30,7 +30,7 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between px-6 md:px-20 lg:px-44 py-4 relative">
       {/* Logo */}
-      <img src={logo} alt="logo" className="h-12 w-auto rounded-2xl" />
+      <img src={logo} alt="logo" className="h-12 w-auto rounded-full" />
 
       {/* =============== MOBILE MENU BUTTON =============== */}
       {!menuOpen && (
@@ -49,7 +49,10 @@ const Navbar = () => {
       <div className="hidden md:flex flex-1 justify-center">
         <ul className="flex items-center gap-12 text-lg">
           {navItems.map((item) => (
-            <li key={item.id} className="flex flex-col gap-1 cursor-pointer">
+            <li
+              key={item.id}
+              className="relative flex flex-col items-center md:hover:text-[#da7c25] cursor-pointer"
+            >
               <Link
                 to={item.id}
                 smooth
@@ -62,7 +65,15 @@ const Navbar = () => {
               </Link>
 
               {menu === item.id && (
-                <img src={underline} alt="" className="mx-auto w-20 md:w-24" />
+                <img
+                  src={underline}
+                  alt=""
+                  className="absolute bottom-[-6px]
+          left-1/2 -translate-x-1/2
+          w-16
+          pointer-events-none select-none
+          z-[-1]"
+                />
               )}
             </li>
           ))}
@@ -86,7 +97,7 @@ const Navbar = () => {
         />
 
         {navItems.map((item) => (
-          <li key={item.id} className="cursor-pointer">
+          <li key={item.id} className="relative cursor-pointer">
             <Link
               to={item.id}
               smooth
@@ -100,6 +111,17 @@ const Navbar = () => {
             >
               {item.label}
             </Link>
+            {menu === item.id && (
+              <img
+                src={underline}
+                alt=""
+                className="absolute bottom-[-6px]
+          left-1/2 -translate-x-1/2
+          w-16
+          pointer-events-none select-none
+          z-[-1]"
+              />
+            )}
           </li>
         ))}
       </ul>
