@@ -28,7 +28,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="flex items-center justify-between px-6 md:px-20 lg:px-44 py-4 relative">
+    <nav className="flex items-center justify-between px-6 md:px-32 lg:px-44 py-4 relative md:border-b md:border-gray-600">
       {/* Logo */}
       <img src={logo} alt="logo" className="h-12 w-auto rounded-full" />
 
@@ -51,7 +51,7 @@ const Navbar = () => {
           {navItems.map((item) => (
             <li
               key={item.id}
-              className="relative flex flex-col items-center md:hover:text-[#da7c25] cursor-pointer"
+              className="relative flex-1 flex flex-col items-center px-3 md:hover:text-[#da7c25] cursor-pointer"
             >
               <Link
                 to={item.id}
@@ -59,7 +59,7 @@ const Navbar = () => {
                 duration={500}
                 offset={-50}
                 onClick={() => setMenu(item.id)}
-                className="text-white text-[18px]"
+                className="text-white text-[18px] whitespace-nowrap"
               >
                 {item.label}
               </Link>

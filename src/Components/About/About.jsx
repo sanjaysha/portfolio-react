@@ -6,51 +6,59 @@ const About = () => {
   return (
     <section
       name="about"
-      className="px-6 md:px-12 lg:px-24 py-16 flex flex-col items-center gap-12"
+      className="px-6 md:px-12 lg:px-32 py-10 flex flex-col items-center gap-12"
     >
-      {/* Title */}
       <div className="relative">
-        <h1 className="text-4xl md:text-3xl font-semibold">About</h1>
+        <h1 className="text-3xl sm:text-4xl font-semibold">About</h1>
         <img
           src={theme_pattern}
           alt=""
-          className="absolute -bottom-2 -right-6 w-20 md:w-14 opacity-70 -z-10"
+          className="absolute -bottom-2 right-1/2 translate-x-1/2 -z-10 w-20 sm:w-28 md:w-32"
         />
       </div>
 
-      {/* Content Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start max-w-6xl w-full">
-        {/* Image (Hidden on small screens for cleaner layout) */}
+      <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 items-start max-w-6xl w-full">
         <div className="hidden md:flex justify-center">
           <img
             src={profile_img}
             alt="profile"
-            className="w-64 h-64 object-cover rounded-xl shadow-lg"
+            className="w-full h-auto object-cover rounded-xl shadow-lg"
           />
         </div>
 
-        {/* Right Content */}
         <div className="flex flex-col gap-10">
-          {/* Description */}
-          <div className="text-lg md:text-xl font-medium leading-7 md:leading-8 opacity-90 flex flex-col gap-5">
+          <div className="text-lg md:text-xl leading-7 md:leading-8 opacity-90 flex flex-col gap-5">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id
-              consectetur accusantium amet blanditiis necessitatibus asperiores
-              ex voluptates nulla harum quibusdam.
+              A dedicated frontend web developer with a solid foundation in
+              Vue.js, React, and the MERN stack. I've crafted engaging web
+              applications that enhance user experience and drive business
+              success. My journey began after graduating with a B.Tech in
+              Electronics and Communication from Graphic Era Hill University,
+              where I not only honed my tech skills but also developed a keen
+              understanding of result-oriented solutions. I've tackled projects
+              across various domains like e-commerce, real estate, and customer
+              management, enhancing features that improve functionality and user
+              interaction. My role at Trigital Technologies in developing the
+              Teka Web App and managing high-traffic admin panels like Nipige
+              spotlighted my ability to handle complex features efficiently.
             </p>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae,
-              perferendis.
+              Thrive in settings that challenge my tech abilities and allow
+              collaborative problem solving. Always a team player, I bring
+              dedication and a constant hunger to learn and grow within the tech
+              sphere. Let's connect to explore how I can bring value to your
+              next project or perhaps just share insights into the ever-evolving
+              tech world!
             </p>
           </div>
 
-          {/* Skills */}
           <div className="flex flex-col gap-6">
             {[
-              { label: "HTML & CSS", width: "w-1/2" },
-              { label: "React JS", width: "w-[70%]" },
-              { label: "Vue JS", width: "w-[60%]" },
-              { label: "Javascript", width: "w-[50%]" },
+              { label: "HTML & CSS", width: "w-[80%]" },
+              { label: "Javascript", width: "w-[78%]" },
+              { label: "Vue JS", width: "w-[75%]" },
+              { label: "React JS", width: "w-[75%]" },
+              { label: "Tailwind", width: "w-[72%]" },
             ].map((skill, index) => (
               <div
                 key={index}
@@ -68,7 +76,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* Achievements */}
       <div className="flex flex-wrap justify-center md:justify-between gap-10 w-full max-w-5xl mt-10">
         {[
           { value: "4+", label: "YEARS OF EXPERIENCE" },

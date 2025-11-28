@@ -64,8 +64,8 @@ const Contact = () => {
           </h1>
 
           <p className="text-gray-300 text-lg leading-relaxed">
-            I'm currently available to take on new projects. Feel free to reach
-            out to me using any of the methods below—
+            Ready to bring my skills to a forward-thinking product team. If
+            you're hiring, I’d love to hear from you.
           </p>
 
           {/* CONTACT DETAILS */}

@@ -9,8 +9,8 @@ const Projects = () => {
       name="projects"
       className="
         flex flex-col items-center justify-center 
-        px-4 py-10 
-        sm:px-8 md:px-20 lg:px-32 
+        px-6 py-10 
+        sm:px-8 md:px-32
         gap-12
       "
     >
