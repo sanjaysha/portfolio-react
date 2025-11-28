@@ -57,7 +57,7 @@ const Navbar = () => {
                 to={item.id}
                 smooth
                 duration={500}
-                offset={-50}
+                offset={item.id === "home" ? -100 : 0}
                 onClick={() => setMenu(item.id)}
                 className="text-white text-[18px] whitespace-nowrap"
               >
@@ -102,7 +102,6 @@ const Navbar = () => {
               to={item.id}
               smooth
               duration={500}
-              offset={-50}
               onClick={() => {
                 setMenu(item.id);
                 closeMenu();
@@ -127,7 +126,7 @@ const Navbar = () => {
       </ul>
 
       {/* Connect button (Desktop only) */}
-      <Link to="contact" smooth duration={500} offset={-50}>
+      <Link to="contact" smooth duration={500}>
         <button
           className="
         hidden md:block 
