@@ -28,7 +28,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="flex items-center justify-between px-6 md:px-32 lg:px-44 py-4 relative md:border-b md:border-gray-600">
+    <nav className="flex items-center justify-between px-6 md:px-32 lg:px-44 py-4 relative">
       {/* Logo */}
       <img src={logo} alt="logo" className="h-12 w-auto rounded-full" />
 

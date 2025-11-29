@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import theme_pattern from "../../assets/theme_pattern.svg";
-import mail_icon from "../../assets/mail_icon.svg";
-import call_icon from "../../assets/call_icon.svg";
-import location_icon from "../../assets/location_icon.svg";
+import { MdEmail, MdCall, MdLocationOn } from "react-icons/md";
 
 const Contact = () => {
   const [result, setResult] = useState("");
@@ -40,12 +38,12 @@ const Contact = () => {
       "
     >
       {/* Title */}
-      <div className="relative text-center w-full">
+      <div className="relative">
         <h1 className="text-3xl sm:text-4xl font-semibold">Get in touch</h1>
         <img
           src={theme_pattern}
           alt=""
-          className="absolute -bottom-1 right-1/2 translate-x-1/2 -z-10 w-20 sm:w-28"
+          className="absolute -bottom-2 right-1/2 translate-x-1/2 -z-10 w-20 sm:w-28 md:w-32"
         />
       </div>
 
@@ -55,7 +53,7 @@ const Contact = () => {
         <div className="flex flex-col gap-8 max-w-xl">
           <h1
             className="
-              text-5xl sm:text-6xl md:text-7xl font-extrabold 
+              text-2xl sm:text-3xl md:text-4xl font-extrabold 
               bg-gradient-to-r from-[#df8908] to-[#b415ff] 
               bg-clip-text text-transparent
             "
@@ -71,17 +69,18 @@ const Contact = () => {
           {/* CONTACT DETAILS */}
           <div className="flex flex-col gap-6 text-gray-300 text-lg">
             <div className="flex items-center gap-4">
-              <img src={mail_icon} className="h-7" alt="" />
+              <MdEmail />
               <p>shahi.sanjayshahi@gmail.com</p>
             </div>
 
             <div className="flex items-center gap-4">
-              <img src={call_icon} className="h-7" alt="" />
+              <MdCall />
               <p>+91 8650460318</p>
             </div>
 
             <div className="flex items-center gap-4">
-              <img src={location_icon} className="h-7" alt="" />
+              {/* <img src={location_icon} className="h-7" alt="" /> */}
+              <MdLocationOn />
               <p>Bhubneshwar, India</p>
             </div>
           </div>
@@ -143,11 +142,13 @@ const Contact = () => {
           <button
             type="submit"
             className="
-              mt-2 text-white text-xl rounded-full 
-              px-10 py-3
+              mt-2 text-lg
+              py-3 px-10
+              rounded-full cursor-pointer
               bg-gradient-to-r from-[#df8908] to-[#b415ff]
               transition-transform duration-300 
               hover:scale-105
+              whitespace-nowrap
             "
           >
             Submit now

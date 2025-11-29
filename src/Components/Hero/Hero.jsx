@@ -26,17 +26,7 @@ const Hero = () => {
         Vue, React, UI libraries, and performance-focused architecture.
       </p>
 
-      <div className="flex items-center gap-4 md:gap-6 text-lg md:text-xl font-medium mb-10">
-        {/* <Link
-          to="contact"
-          smooth={true}
-          duration={500}
-          offset={-50}
-          className="px-6 md:px-8 py-3 rounded-full cursor-pointer bg-gradient-to-r from-[#df8908] to-[#b415ff] hover:opacity-90 transition"
-        >
-          Connect with me
-        </Link> */}
-
+      <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-lg md:text-xl font-medium mb-10">
         <a
           href="/Sanjay_Singh_Resume.pdf"
           target="_blank"
@@ -47,7 +37,7 @@ const Hero = () => {
         <a
           href="/Sanjay_Singh_Resume.pdf"
           download
-          className="px-2 md:px-10 py-3 rounded-full cursor-pointer border-2 border-white hover:border-[#b415ff] transition"
+          className="px-6 md:px-8 py-3 rounded-full cursor-pointer border-2 border-white hover:border-[#b415ff] transition"
         >
           Download Resume
         </a>

@@ -1,7 +1,7 @@
 import React from "react";
 import theme_pattern from "../../assets/theme_pattern.svg";
 import myprojects_data from "../../data/projects";
-import right_arrow_icon from "../../assets/right_arrow_icon.svg";
+import { MdEast } from "react-icons/md";
 
 const Projects = () => {
   return (
@@ -15,7 +15,7 @@ const Projects = () => {
       "
     >
       {/* Title */}
-      <div className="relative text-center w-full">
+      <div className="relative">
         <h1 className="text-3xl sm:text-4xl font-semibold">My Projects</h1>
 
         <img
@@ -59,15 +59,15 @@ const Projects = () => {
       <div
         className="
           flex items-center justify-center 
-          gap-3 border-2 border-white rounded-full 
+          gap-4 border-2 border-white rounded-full 
           px-8 py-3 
           text-lg sm:text-xl font-medium cursor-pointer
           transition-all duration-500
-          hover:gap-6 mt-6
+          hover:gap-7 mt-6
         "
       >
         <p>Show More</p>
-        <img src={right_arrow_icon} alt="" className="h-8 sm:h-10" />
+        <MdEast />
       </div>
     </div>
   );

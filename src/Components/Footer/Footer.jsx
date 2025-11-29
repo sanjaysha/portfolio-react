@@ -1,6 +1,6 @@
 import React from "react";
 import footer_logo from "../../assets/logo.svg";
-import user_icon from "../../assets/user_icon.svg";
+import { MdOutlineCopyright, MdOutlinePerson } from "react-icons/md";
 
 const Footer = () => {
   return (
@@ -22,8 +22,7 @@ const Footer = () => {
             className="h-20 w-20 rounded-full"
           />
           <p className="mt-6 text-lg leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
-            quos!
+            Delivering modern, elegant and high-performance web solutions.
           </p>
         </div>
 
@@ -41,7 +40,7 @@ const Footer = () => {
               w-full sm:w-auto
             "
           >
-            <img src={user_icon} alt="" className="h-7 w-7" />
+            <MdOutlinePerson className="text-2xl" />
 
             <input
               type="email"
@@ -59,7 +58,8 @@ const Footer = () => {
           {/* Subscribe Button */}
           <button
             className="
-              text-lg sm:text-xl
+              text-lg
+              w-full md:w-40
               py-3 px-10
               rounded-full cursor-pointer
               bg-gradient-to-r from-[#df8908] to-[#b415ff]
@@ -82,9 +82,10 @@ const Footer = () => {
           flex-wrap gap-6 text-base sm:text-lg
         "
       >
-        <p className="text-gray-400">
-          &copy; 2025 Sanjay Singh Shahi. All rights reserved
-        </p>
+        <div className="flex align-center items-center text-gray-400">
+          <MdOutlineCopyright />
+          <p> 2025 Sanjay Singh Shahi. All rights reserved</p>
+        </div>
 
         <div className="flex gap-10 sm:gap-14 text-gray-300">
           <p className="cursor-pointer hover:text-white">Terms of Service</p>

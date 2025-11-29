@@ -52,46 +52,52 @@ const About = () => {
             </p>
           </div>
 
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 w-full">
             {[
-              { label: "HTML & CSS", width: "w-[80%]" },
-              { label: "Javascript", width: "w-[78%]" },
-              { label: "Vue JS", width: "w-[75%]" },
-              { label: "React JS", width: "w-[75%]" },
-              { label: "Tailwind", width: "w-[72%]" },
+              { label: "HTML & CSS", width: "w-[95%] sm:w-[90%] md:w-[80%]" },
+              { label: "Javascript", width: "w-[93%] sm:w-[88%] md:w-[78%]" },
+              { label: "Vue JS", width: "w-[92%] sm:w-[86%] md:w-[75%]" },
+              { label: "React JS", width: "w-[92%] sm:w-[86%] md:w-[75%]" },
+              { label: "Tailwind", width: "w-[94%] sm:w-[88%] md:w-[77%]" },
             ].map((skill, index) => (
               <div
                 key={index}
-                className="flex items-center gap-6 hover:scale-[1.03] transition-transform"
+                className="flex items-center gap-4 w-full hover:scale-[1.03] transition-transform"
               >
-                <p className="min-w-[130px] text-xl md:text-lg font-medium">
+                <p className="text-base sm:text-lg font-medium w-28 sm:w-36 md:w-40">
                   {skill.label}
                 </p>
-                <div
-                  className={`h-2 rounded-full bg-gradient-to-r from-[#df8908] to-[#b415ff] ${skill.width}`}
-                ></div>
+
+                <div className="flex-1">
+                  <div
+                    className={`h-2 rounded-full bg-gradient-to-r from-[#df8908] to-[#b415ff] ${skill.width}`}
+                  ></div>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center md:justify-between gap-10 w-full max-w-5xl mt-10">
+      <div className="flex flex-wrap justify-center gap-10 w-full max-w-5xl mt-10">
         {[
           { value: "4+", label: "YEARS OF EXPERIENCE" },
           { value: "30+", label: "PROJECTS COMPLETED" },
           { value: "20+", label: "HAPPY CLIENTS" },
-        ].map((item, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center gap-3 hover:scale-105 transition"
-          >
-            <h1 className="text-5xl md:text-4xl font-bold bg-gradient-to-r from-[#df8908] to-[#b415ff] bg-clip-text text-transparent">
-              {item.value}
-            </h1>
-            <p className="text-xl md:text-base text-center font-medium opacity-90 w-40">
-              {item.label}
-            </p>
+        ].map((item, index, arr) => (
+          <div key={index} className="flex items-center gap-10">
+            <div className="flex flex-col items-center gap-3 hover:scale-105 transition">
+              <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-[#df8908] to-[#b415ff] bg-clip-text text-transparent">
+                {item.value}
+              </h1>
+              <p className="text-base sm:text-sm md:text-base text-center font-medium opacity-90 leading-snug">
+                {item.label}
+              </p>
+            </div>
+
+            {index !== arr.length - 1 && (
+              <div className="hidden sm:block h-20 w-[2px] bg-gray-600"></div>
+            )}
           </div>
         ))}
       </div>
