@@ -89,7 +89,7 @@ const Contact = () => {
         {/* RIGHT — FORM */}
         <form
           onSubmit={onSubmit}
-          className="flex flex-col gap-6 w-full max-w-xl"
+          className="flex flex-col gap-6 w-full max-w-2xl"
         >
           <div>
             <label className="text-gray-300 text-lg font-medium">
