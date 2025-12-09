@@ -36,7 +36,7 @@ const Footer = () => {
       {/* BOTTOM SECTION */}
       <div
         className="
-          flex justify-between items-center 
+          flex justify-center items-center 
           flex-wrap gap-6 text-base sm:text-lg
         "
       >
@@ -45,11 +45,11 @@ const Footer = () => {
           <p> 2025 Sanjay Singh Shahi. All rights reserved</p>
         </div>
 
-        <div className="flex gap-10 sm:gap-14 text-gray-300">
+        {/* <div className="flex gap-10 sm:gap-14 text-gray-300">
           <p className="cursor-pointer hover:text-white">Terms of Service</p>
           <p className="cursor-pointer hover:text-white">Privacy Policy</p>
           <p className="cursor-pointer hover:text-white">Connect with me</p>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

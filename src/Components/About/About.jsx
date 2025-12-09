@@ -18,12 +18,34 @@ const About = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 items-start max-w-6xl w-full">
-        <div className="hidden md:flex justify-center">
+        <div className="hidden md:flex justify-center flex flex-col gap-10">
           <img
             src={profile_img}
             alt="profile"
             className="w-full h-auto object-cover rounded-xl shadow-lg"
           />
+          <div className="flex flex-wrap justify-center gap-10 w-full max-w-5xl mt-10">
+            {[
+              { value: "4+", label: "YEARS OF EXPERIENCE" },
+              // { value: "30+", label: "PROJECTS COMPLETED" },
+              // { value: "20+", label: "HAPPY CLIENTS" },
+            ].map((item, index, arr) => (
+              <div key={index} className="flex items-center gap-10">
+                <div className="flex flex-col items-center gap-3 hover:scale-105 transition">
+                  <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-[#df8908] to-[#b415ff] bg-clip-text text-transparent">
+                    {item.value}
+                  </h1>
+                  <p className="text-base sm:text-sm md:text-base text-center font-medium opacity-90 leading-snug">
+                    {item.label}
+                  </p>
+                </div>
+
+                {index !== arr.length - 1 && (
+                  <div className="hidden sm:block h-20 w-[2px] bg-gray-600"></div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="flex flex-col gap-10">
@@ -77,29 +99,6 @@ const About = () => {
             ))}
           </div>
         </div>
-      </div>
-
-      <div className="flex flex-wrap justify-center gap-10 w-full max-w-5xl mt-10">
-        {[
-          { value: "4+", label: "YEARS OF EXPERIENCE" },
-          { value: "30+", label: "PROJECTS COMPLETED" },
-          { value: "20+", label: "HAPPY CLIENTS" },
-        ].map((item, index, arr) => (
-          <div key={index} className="flex items-center gap-10">
-            <div className="flex flex-col items-center gap-3 hover:scale-105 transition">
-              <h1 className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-[#df8908] to-[#b415ff] bg-clip-text text-transparent">
-                {item.value}
-              </h1>
-              <p className="text-base sm:text-sm md:text-base text-center font-medium opacity-90 leading-snug">
-                {item.label}
-              </p>
-            </div>
-
-            {index !== arr.length - 1 && (
-              <div className="hidden sm:block h-20 w-[2px] bg-gray-600"></div>
-            )}
-          </div>
-        ))}
       </div>
     </section>
   );
