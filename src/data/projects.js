@@ -1,5 +1,6 @@
 import project1_img from "../assets/project1.jpg";
 import content_landing from "../assets/content_landing.png";
+import ecommerce_app from "../assets/ecommerce_app.png";
 import city_weather from "../assets/city_weather.png";
 import city_weather1 from "../assets/city_weather1.png";
 import find_coach from "../assets/find_coach.png";
@@ -18,6 +19,16 @@ const myprojects_data = [
   },
   {
     p_no: 2,
+    p_img: ecommerce_app,
+    link: "https://full-stack-mern-ecomm.onrender.com/",
+    title: "Full Stack E-Commerce Application",
+    subtitle:
+      "React + Tailwind + NodeJs + MongoDB + Express + JWT + Cloudinary + Razorpay",
+    description:
+      "A modern, responsive, and feature-rich full-stack e-commerce web application built using React, Tailwind CSS, Node.js, Express.js, JWT, MongoDB, Cloudinary, and Razorpay. The platform provides a seamless shopping experience with a clean user interface, secure authentication, efficient product management, and integrated online payment processing.",
+  },
+  {
+    p_no: 3,
     p_img: news_app,
     link: "https://news-potel.netlify.app/",
     title: "News Application",
@@ -26,7 +37,7 @@ const myprojects_data = [
       "This is a news app which can be used to grab quick daily news bites. Stay updated with business, health, sports, technology and all kinds of current affairs. This app use GnewsApi resources to fetch data.",
   },
   {
-    p_no: 3,
+    p_no: 4,
     p_img: city_weather1,
     link: "https://661be89f8576dc75ec14a8d3--cute-churros-c66de5.netlify.app/",
     title: "Weather App",
@@ -35,7 +46,7 @@ const myprojects_data = [
       "A simple and user-friendly weather website powered by OpenWeatherMap. Search any city to instantly view its current weather conditions, temperature, humidity, wind speed, and 5-day forecast — all in one place.",
   },
   {
-    p_no: 4,
+    p_no: 5,
     p_img: find_coach,
     link: "https://spiffy-dragon-68254d.netlify.app/coaches",
     title: "Find A Coach",
@@ -44,7 +55,7 @@ const myprojects_data = [
       "Look for a coach and contact them to seek their guidance and learn from them. Register as a coach to provide your services.",
   },
   {
-    p_no: 5,
+    p_no: 6,
     p_img: github_logo,
     link: "https://github.com/sanjaysha",
     title: "GitHub Repository",
