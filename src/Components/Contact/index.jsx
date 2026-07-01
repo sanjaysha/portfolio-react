@@ -81,7 +81,7 @@ const Contact = () => {
             <div className="flex items-center gap-4">
               {/* <img src={location_icon} className="h-7" alt="" /> */}
               <MdLocationOn />
-              <p>Bhubneshwar, India</p>
+              <p>Pune, Maharashtra, India</p>
             </div>
           </div>
         </div>
